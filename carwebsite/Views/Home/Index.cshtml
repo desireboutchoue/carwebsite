@@ -1,0 +1,753 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Home/_HomeLayout.cshtml";
+}
+
+
+<!--  Project : Online Car Rental System 
+      Author : Oumou Keita  -->
+      
+<!--  Index Page -->
+
+    <!--== Header Area End ==-->
+    <!--== SlideshowBg Area Start ==-->
+    <section id="slideslow-bg" style="background-image:url(/Content/images/slider-img-1.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="slideshowcontent">
+                        <div class="display-table">
+                            <div class="display-table-cell">
+                                <h1>BOOK A CAR TODAY!</h1>
+                                <p>Rental online car system project <br> By Oumou Keita</p>
+
+                                <div class="book-ur-car">
+                                    <form action="index2.html">
+                                        <div class="pick-location bookinput-item">
+                                            <select class="custom-select">
+                                                <option selected>Pick Location</option>
+                                                <option value="1">Dhaka</option>
+                                                <option value="2">Comilla</option>
+                                                <option value="3">Barishal</option>
+                                                <option value="3">Rangpur</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="pick-date bookinput-item">
+                                            <input id="startDate2" placeholder="Pick Date" />
+                                        </div>
+
+                                        <div class="retern-date bookinput-item">
+                                            <input id="endDate2" placeholder="Return Date" />
+                                        </div>
+
+                                        <div class="car-choose bookinput-item">
+                                            <select class="custom-select">
+                                                <option selected>Choose Car</option>
+                                                <option value="1">BMW</option>
+                                                <option value="2">Audi</option>
+                                                <option value="3">Lexus</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="bookcar-btn bookinput-item">
+                                            <button type="submit">Book Car</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== SlideshowBg Area End ==-->
+    <!--== About Us Area Start ==-->
+    <section id="about-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Section Title Start -->
+                <div class="col-lg-12">
+                    <div class="section-title  text-center">
+                        <h2>About us</h2>
+                        <span class="title-line"><i class="fa fa-car"></i></span>
+                        <p>Rental online car system</p>
+                    </div>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <div class="row">
+                <!-- About Content Start -->
+                <div class="col-lg-6">
+                    <div class="display-table">
+                        <div class="display-table-cell">
+                            <div class="about-content">
+                                <p>Rental online car system is a project made with ASP.NET MVC that permit to rent a car ( users ) and manage ( Admin ) cars .it will help peaople in their daily activities . its Open source . </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- About Content End -->
+                <!-- About Video Start -->
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="~/Content/images/home-2-about.png" alt="JSOFT">
+                    </div>
+                </div>
+                <!-- About Video End -->
+            </div>
+
+            <!-- About Fretutes Start -->
+            <div class="about-feature-area">
+                <div class="row">
+                    <!-- Single Fretutes Start -->
+                    <div class="col-lg-4">
+                        <div class="about-feature-item active">
+                            <i class="fa fa-car"></i>
+                            <h3>Users</h3>
+                            <p>Users will be able to rent a car , check the availibility of a car , receive news letters </p>
+                        </div>
+                    </div>
+                    <!-- Single Fretutes End -->
+                    <!-- Single Fretutes Start -->
+                    <div class="col-lg-4">
+                        <div class="about-feature-item">
+                            <i class="fa fa-car"></i>
+                            <h3>Admin</h3>
+                            <p>Admin will be able to Manage all car . C.R.U.D operations , block users , warn users , lock accounts ...</p>
+                        </div>
+                    </div>
+                    <!-- Single Fretutes End -->
+                    <!-- Single Fretutes Start -->
+                    <div class="col-lg-4">
+                        <div class="about-feature-item">
+                            <i class="fa fa-car"></i>
+                            <h3>Users &amp; Admin </h3>
+                            <p>Both parties will be able to communicate each other by a message system </p>
+                        </div>
+                    </div>
+                    <!-- Single Fretutes End -->
+                </div>
+            </div>
+            <!-- About Fretutes End -->
+        </div>
+    </section>
+    <!--== About Us Area End ==-->
+    <!--== Partner Area Start ==-->
+    <div id="partner-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="partner-content-wrap">
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="~/Content/images/partner-logo-1.png" alt="JSOFT">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="~/Content/images/partner-logo-2.png" alt="JSOFT">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="~/Content/images/partner-logo-3.png" alt="JSOFT">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="~/Content/images/partner-logo-4.png" alt="JSOFT">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="~/Content/images/partner-logo-5.png" alt="JSOFT">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="~/Content/images/partner-logo-1.png" alt="JSOFT">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="~/Content/images/partner-logo-4.png" alt="JSOFT">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== Partner Area End ==-->
+    <!--== Services Area Start ==-->
+    <section id="service-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Section Title Start -->
+                <div class="col-lg-12">
+                    <div class="section-title  text-center">
+                        <h2>Functionnalities</h2>
+                        <span class="title-line"><i class="fa fa-car"></i></span>
+                        <p>Rental online car system</p>
+                    </div>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <!-- Service Content Start -->
+            <div class="row">
+                <div class="col-lg-11 m-auto text-center">
+                    <div class="service-container-wrap">
+                        <!-- Single Service Start -->
+                        <div class="service-item">
+                            <i class="fa fa-car"></i>
+                            <h3>RENTAL CAR</h3>
+                            <p>People will be able to rent a car.</p>
+                        </div>
+                        <!-- Single Service End -->
+                        <!-- Single Service Start -->
+                        <div class="service-item">
+                            <i class="fa fa-cog"></i>
+                            <h3>Admin Panel</h3>
+                            <p>Admin will manage all car , the plateform will be independant to make him publish car from his dashboard</p>
+                        </div>
+                        <!-- Single Service End -->
+                        <!-- Single Service Start -->
+                        <div class="service-item">
+                            <i class="fa fa-users"></i>
+                            <h3>User Panel</h3>
+                            <p>User will be able to see the list of car rented , the remaining time to bring back the car...</p>
+                        </div>
+                        <!-- Single Service End -->
+                        <!-- Single Service Start -->
+                        <div class="service-item">
+                            <i class="fa fa-envelope-square"></i>
+                            <h3>Messages</h3>
+                            <p>They will be able to communicate between them</p>
+                        </div>
+                        <!-- Single Service End -->
+                        <!-- Single Service Start -->
+                        <!--   <div class="service-item">
+           <i class="fa fa-bath"></i>
+           <h3>car wash</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
+       </div>
+       <!-- Single Service End -->
+                        <!-- Single Service Start 
+                        <div class="service-item">
+                            <i class="fa fa-phone"></i>
+                            <h3>call driver</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
+                        </div> -->
+                        <!-- Single Service End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Service Content End -->
+        </div>
+    </section>
+    <!--== Services Area End ==-->
+    <!--== Fun Fact Area Start ==-->
+    <section id="funfact-area" class="overlay section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-11 col-md-12 m-auto">
+                    <div class="funfact-content-wrap">
+                        <div class="row">
+                            <!-- Single FunFact Start -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-funfact">
+                                    <div class="funfact-icon">
+                                        <i class="fa fa-smile-o"></i>
+                                    </div>
+                                    <div class="funfact-content">
+                                        <p><span class="counter">550</span>+</p>
+                                        <h4>VIEWS</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single FunFact End -->
+                            <!-- Single FunFact Start -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-funfact">
+                                    <div class="funfact-icon">
+                                        <i class="fa fa-car"></i>
+                                    </div>
+                                    <div class="funfact-content">
+                                        <p><span class="counter">250</span>+</p>
+                                        <h4>CARS IN STOCK</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single FunFact End -->
+                            <!-- Single FunFact Start -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-funfact">
+                                    <div class="funfact-icon">
+                                        <i class="fa fa-code"></i>
+                                    </div>
+                                    <div class="funfact-content">
+                                        <p><span class="counter">10000</span>+</p>
+                                        <h4>LINES OF CODES</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single FunFact End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== Fun Fact Area End ==-->
+    <!--== Choose Car Area Start ==-->
+    <section id="choose-car" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Section Title Start -->
+                <div class="col-lg-12">
+                    <div class="section-title  text-center">
+                        <h2>Choose your Car</h2>
+                        <span class="title-line"><i class="fa fa-car"></i></span>
+                        <p>Online car rental system</p>
+                    </div>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <div class="row">
+                <!-- Choose Area Content Start -->
+                <div class="col-lg-12">
+                    <div class="choose-ur-cars">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <!-- Choose Filtering Menu Start -->
+                                <div class="home2-car-filter">
+                                    <a href="#" data-filter="*" class="active">all</a>
+                                    <a href="#" data-filter=".con">Conver</a>
+                                    <a href="#" data-filter=".hat">Truck</a>
+                                    <a href="#" data-filter=".mpv">MPV</a>
+                                    <a href="#" data-filter=".sedan">Sedan</a>
+                                    <a href="#" data-filter=".suv">SUV</a>
+                                </div>
+                                <!-- Choose Filtering Menu End -->
+                            </div>
+
+                            <div class="col-lg-9">
+                                <!-- Choose Cars Content-wrap -->
+                                <div class="row popular-car-gird">
+
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-6 col-md-6 con suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="~/Content/images/car-1.jpg">
+                                                    <img src="~/Content/images/car-1.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a href="#">Dodge Ram 1500</a>
+                                                    <span class="price"><i class="fa fa-tag"></i> $55/day</span>
+                                                </h3>
+
+                                                <h5>HATCHBACK</h5>
+
+                                                <div class="p-car-feature">
+                                                    <a href="#">2017</a>
+                                                    <a href="#">manual</a>
+                                                    <a href="#">AIR CONDITION</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-6 col-md-6 hat sedan">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="~/Content/images/car-2.jpg">
+                                                    <img src="~/Content/images/car-2.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a href="#">Dodge Ram 1500</a>
+                                                    <span class="price"><i class="fa fa-tag"></i> $55/day</span>
+                                                </h3>
+
+                                                <h5>HATCHBACK</h5>
+
+                                                <div class="p-car-feature">
+                                                    <a href="#">2017</a>
+                                                    <a href="#">manual</a>
+                                                    <a href="#">AIR CONDITION</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-6 col-md-6 suv con mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="~/Content/images/car-3.jpg">
+                                                    <img src="~/Content/images/car-3.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a href="#">Dodge Ram 1500</a>
+                                                    <span class="price"><i class="fa fa-tag"></i> $55/day</span>
+                                                </h3>
+
+                                                <h5>HATCHBACK</h5>
+
+                                                <div class="p-car-feature">
+                                                    <a href="#">2017</a>
+                                                    <a href="#">manual</a>
+                                                    <a href="#">AIR CONDITION</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-6 col-md-6 con hat">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="~/Content/images/car-4.jpg">
+                                                    <img src="~/Content/images/car-4.jpg"  alt="JSOFT">
+                                                </a>
+                                            </div>
+
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a href="#">Dodge Ram 1500</a>
+                                                    <span class="price"><i class="fa fa-tag"></i> $55/day</span>
+                                                </h3>
+
+                                                <h5>HATCHBACK</h5>
+
+                                                <div class="p-car-feature">
+                                                    <a href="#">2017</a>
+                                                    <a href="#">manual</a>
+                                                    <a href="#">AIR CONDITION</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                </div>
+                                <!-- Choose Cars Content-wrap -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Choose Area Content End -->
+            </div>
+        </div>
+    </section>
+    <!--== Choose Car Area End ==-->
+    <!--== Pricing Area Start ==-->
+    <section id="pricing-area" class="section-padding overlay">
+        <div class="container">
+            <div class="row">
+                <!-- Section Title Start -->
+                <div class="col-lg-12">
+                    <div class="section-title  text-center">
+                        <h2>Only quality for clients</h2>
+                        <span class="title-line"><i class="fa fa-car"></i></span>
+                        <p>Online car rental system</p>
+                    </div>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <!-- Pricing Table Conatent Start -->
+            <div class="row">
+                <!-- Single Pricing Table -->
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="single-pricing-table">
+                        <h3>BUSINESS</h3>
+                        <h2>$ 55.99</h2>
+                        <h5>PER MONTH</h5>
+
+                        <ul class="package-list">
+                            <li>FREE VEHICLE DELIVERY</li>
+                            <li>WEDDINGS CELEBRATIONS</li>
+                            <li>FULL INSURANCE INCLUDED</li>
+                            <li>TRANSPORT ABROAD</li>
+                            <li>ALL INCLUSIVE MINI BAR</li>
+                            <li>CHAUFFER INCLUDED IN PRICE</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Single Pricing Table -->
+                <!-- Single Pricing Table -->
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="single-pricing-table">
+                        <h3>Trial</h3>
+                        <h2>$ 27.99</h2>
+                        <h5>PER MONTH</h5>
+
+                        <ul class="package-list">
+                            <li>FREE VEHICLE DELIVERY</li>
+                            <li>OTHER CELEBRATIONS</li>
+                            <li>FULL INSURANCE</li>
+                            <li>TRANSPORT ABROAD</li>
+                            <li>MINI BAR</li>
+                            <li>INCLUDED IN PRICE</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Single Pricing Table -->
+                <!-- Single Pricing Table -->
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="single-pricing-table">
+                        <h3>standard</h3>
+                        <h2>$ 35.99</h2>
+                        <h5>PER MONTH</h5>
+
+                        <ul class="package-list">
+                            <li>DELIVERY AT AIRPORT</li>
+                            <li>WEDDINGS AND OTHER</li>
+                            <li>FULL INCLUDED</li>
+                            <li>TRANSPORT ABROAD</li>
+                            <li>ALL MINI BAR</li>
+                            <li>CHAUFFER PRICE</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Single Pricing Table -->
+            </div>
+            <!-- Pricing Table Conatent End -->
+        </div>
+    </section>
+    <!--== Pricing Area End ==-->
+    <!--== Team Area Start ==-->
+    <section id="team-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Section Title Start -->
+                <div class="col-lg-12">
+                    <div class="section-title  text-center">
+                        <h2>Biographie</h2>
+                        <span class="title-line"><i class="fa fa-car"></i></span>
+                        <p>Online car rental system</p>
+                    </div>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="team-content">
+                        <div class="row">
+                            <!-- Team Tab Menu start -->
+                            <div class="col-lg-4">
+                                <div class="team-tab-menu">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                     
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="tab_item_2" data-toggle="tab" href="#team_member_2" role="tab" aria-selected="true">
+                                                <div class="team-mem-icon">
+                                                    <img src="~/Content/images/oumou.jpeg" alt="JSOFT">
+                                                </div>
+                                                <h5>Oumou Keita</h5>
+                                            </a>
+                                        </li>
+                                        <!--       <li class="nav-item">
+               <a class="nav-link" id="tab_item_3" data-toggle="tab" href="#team_member_3" role="tab" aria-selected="true">
+                   <div class="team-mem-icon">
+                       <img src="~/Content/images/team-mem-thumb-2.png" alt="JSOFT">
+                   </div>
+                   <h5>Alex Tuntuni</h5>
+               </a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link" id="tab_item_4" data-toggle="tab" href="#team_member_4" role="tab" aria-selected="true">
+                   <div class="team-mem-icon">
+                       <img src="~/Content/images/team-mem-thumb-4.png" alt="JSOFT">
+                   </div>
+                   <h5>Any Anderssen</h5>
+               </a>
+           </li>
+        -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Team Tab Menu End -->
+                            <!-- Team Tab Content start -->
+                            <div class="col-lg-8">
+                                <div class="tab-content" id="myTabContent">
+                                    <!-- Single Team  start -->
+                                    <div class="tab-pane fade show active" id="team_member_1" role="tabpanel" aria-labelledby="tab_item_1">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="team-member-pro-pic">
+                                                    <img src="~/Content/images/oumou.jpeg" alt="JSOFT">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="team-member-info text-center">
+                                                    <h4>Oumou Keita</h4>
+                                                    <h5>Student (Aydın University)</h5>
+                                                    <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
+                                                    <p>4th years Student in Computer sciences at Aydın University ( istanbul / Turkey ) </p>
+                                                    <div class="team-social-icon">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Team  End -->
+                                    <!-- Single Team  start -->
+                                    <!--    <div class="tab-pane fade" id="team_member_2" role="tabpanel" aria-labelledby="tab_item_2">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="team-member-pro-pic">
+                    <img src="~/Content/images/team-mem-3.png" alt="JSOFT">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="team-member-info text-center">
+                    <h4>Vongchong Smith</h4>
+                    <h5>Designer</h5>
+                    <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
+                    <div class="team-social-icon">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+                                    <!-- Single Team  End -->
+                                    <!-- Single Team  start -->
+                                    <!--    <div class="tab-pane fade" id="team_member_3" role="tabpanel" aria-labelledby="tab_item_3">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="team-member-pro-pic">
+                    <img src="~/Content/images/team-mem-2.png" alt="JSOFT">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="team-member-info text-center">
+                    <h4>Alex Tuntuni</h4>
+                    <h5>Marketer</h5>
+                    <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
+                    <div class="team-social-icon">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+                                    <!-- Single Team  End -->
+                                    <!-- Single Team  start -->
+                                    <!--     <div class="tab-pane fade" id="team_member_4" role="tabpanel" aria-labelledby="tab_item_4">
+             <div class="row">
+                 <div class="col-lg-6 col-md-6">
+                     <div class="team-member-pro-pic">
+                         <img src="~/Content/images/team-mem-4.png" alt="JSOFT">
+                     </div>
+                 </div>
+                 <div class="col-lg-6 col-md-6">
+                     <div class="team-member-info text-center">
+                         <h4>Any Anderssen</h4>
+                         <h5>Manager</h5>
+                         <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
+                         <div class="team-social-icon">
+                             <a href="#"><i class="fa fa-facebook"></i></a>
+                             <a href="#"><i class="fa fa-twitter"></i></a>
+                             <a href="#"><i class="fa fa-linkedin"></i></a>
+                             <a href="#"><i class="fa fa-pinterest"></i></a>
+                             <a href="#"><i class="fa fa-dribbble"></i></a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div> -->
+                                    <!-- Single Team  End -->
+                                </div>
+                            </div>
+                            <!-- Team Tab Content End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== Team Area End ==-->
+    <!--== Mobile App Area Start ==-->
+    <div id="mobileapp-video-bg"></div>
+    <section id="mobile-app-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mobile-app-content">
+                        <h2>SAVE 30% WITH THE APP</h2>
+                        <p>Easy &amp; Fast - Book a car in 60 seconds</p>
+                        <p>Available soon</p>
+                        <div class="app-btns">
+                            <a href="#"><i class="fa fa-android"></i> Android Store</a>
+                            <a href="#"><i class="fa fa-apple"></i> Apple Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== Mobile App Area End ==-->
+
+  
