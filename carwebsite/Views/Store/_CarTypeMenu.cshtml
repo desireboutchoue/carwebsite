@@ -1,0 +1,14 @@
+﻿  
+@model IEnumerable<carwebsite.Models.CarTypes>
+<div class="col-lg-3">
+   
+    <div class="home2-car">
+        @foreach (var genre in Model)
+        {
+            <a style="border-top:1px solid #ddd; color:#000; display:block; font-weight:600; padding:12px 10px 12px 25px; position:relative; text-transform:uppercase; " href="/Store/@genre.Name">@genre.Name (@genre.Cars.Count)</a>
+           
+        }
+    </div>
+
+</div>
+

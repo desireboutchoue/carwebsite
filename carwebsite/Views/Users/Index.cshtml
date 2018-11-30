@@ -1,0 +1,122 @@
+﻿
+@using carwebsite.Models;
+@using Microsoft.AspNet.Identity;
+@using Microsoft.AspNet.Identity.EntityFramework;
+
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Users/_DashboardUsersLayout.cshtml";
+}
+
+
+@{
+
+    CarStoreEntities db = new CarStoreEntities();
+    ApplicationUserManager app = new ApplicationUserManager(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+    long car = db.Cars.Count();
+    long carRented = db.Cars.Where(U => U.Type == "Rented").Count();
+    long CarAvailable = db.Cars.Where(U => U.Type == "Available").Count();
+    long user = app.Users.Count();
+
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Home</a> <i class="fa fa-angle-right"></i></li>
+</ol>
+<!--four-grids here-->
+<div class="four-grids">
+    <div class="col-md-3 four-grid">
+        <div class="four-agileits">
+            <div class="icon">
+                <i class="fass fa-folder-open" aria-hidden="true"></i>
+            </div>
+            <div class="four-text">
+                <h3>My booking</h3>
+                <h4> </h4>
+
+            </div>
+
+        </div>
+    </div>
+    <!--  <div class="col-md-3 four-grid">
+          <div class="four-agileinfo">
+              <div class="icon">
+                  <i class="fass fa-car" aria-hidden="true"></i>
+              </div>
+              <div class="four-text">
+                  <h3>Messages</h3>
+                  <h4>@car</h4>
+
+              </div>
+
+          </div>
+      </div>
+      <div class="col-md-3 four-grid">
+          <div class="four-w3ls">
+              <div class="icon">
+                  <i class="fass fa-taxi" aria-hidden="true"></i>
+              </div>
+              <div class="four-text">
+                  <h3>Car rented</h3>
+                  <h4>@carRented</h4>
+
+              </div>
+
+          </div>
+      </div>
+      <div class="col-md-3 four-grid">
+          <div class="four-wthree">
+              <div class="icon">
+                  <i class="fass fa-taxi" aria-hidden="true"></i>
+              </div>
+              <div class="four-text">
+                  <h3>Cars available</h3>
+                  <h4>@CarAvailable</h4>
+
+              </div>
+
+          </div>
+      </div>-->
+    <div class="clearfix"></div>
+</div>
+<!--//four-grids here-->
+<!--agileinfo-grap-->
+
+
+<div class="clearfix"></div>
+
+<!--//photoday-section-->
+<!--w3-agileits-pane-->
+<!--//w3-agileits-pane-->
+<!-- script-for sticky-nav -->
+<script>
+    $(document).ready(function () {
+        var navoffeset = $(".header-main").offset().top;
+        $(window).scroll(function () {
+            var scrollpos = $(window).scrollTop();
+            if (scrollpos >= navoffeset) {
+                $(".header-main").addClass("fixed");
+            } else {
+                $(".header-main").removeClass("fixed");
+            }
+        });
+
+    });
+</script>
+<!-- /script-for sticky-nav -->
+<!--inner block start here-->
+<div class="inner-block">
+
+</div>
+<!--inner block end here-->
+<!--copy rights start here-->
+<div style="margin-top:229px;" class="copyrights">
+    <p>© @DateTime.Now.Year  Online Car Rental System. All Rights Reserved | Design by Oumou keita </p>
+</div>
+<!--COPY rights end here-->
+            </div>
+        </div>
+<!--//content-inner-->

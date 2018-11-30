@@ -1,0 +1,113 @@
+﻿@model IEnumerable<carwebsite.Models.Car>
+
+@{
+    ViewBag.Title = "CarList";
+    Layout = "~/Views/Admin/_DashboardAdminLayout.cshtml";
+}
+
+<h2>CarList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddCAr")
+</p>
+<table class="table">
+    <tr>
+        <!--  <th>
+        @Html.DisplayNameFor(model => model.BrandId)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CarTypesId)
+    </th>-->
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <!--     <th>
+         @Html.DisplayNameFor(model => model.CarUrl)
+     </th>
+     <th>
+         @Html.DisplayNameFor(model => model.CarUrl2)
+     </th>
+     <th>
+         @Html.DisplayNameFor(model => model.CarUrl3)
+     </th> -->
+        <th>
+            @Html.DisplayNameFor(model => model.Class)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fuel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Doors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GearBox)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <!--
+        <th>
+            @Html.DisplayNameFor(model => model.PointurListId)
+        </th> -->
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <!--  <td>
+        @Html.DisplayFor(modelItem => item.BrandId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CarTypesId)
+    </td> -->
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <!--    <td>
+        @Html.DisplayFor(modelItem => item.CarUrl)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CarUrl2)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CarUrl3)
+    </td> -->
+        <td>
+            @Html.DisplayFor(modelItem => item.Class)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fuel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Doors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GearBox)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <!--  <td>
+          @Html.DisplayFor(modelItem => item.PointurListId)
+      </td> -->
+        <td>
+            <span class="btn btn-success"> <i class="fa fa-edit" style="color:white;">  @Html.ActionLink("Edit", "EditCar", new { id = item.CarId }) </i> </span>
+            <span class="btn btn-info"><i class="fa fa-info" style="color:white;"> @Html.ActionLink("Details", "DetailsCar", new { id = item.CarId }) </i> </span>
+            <span class="btn btn-danger"> <i class="fa fa-trash" style="color:white;">  @Html.ActionLink("Delete", "DeleteCar", new { id = item.CarId })</i> </span>
+        </td>
+    </tr>
+}
+
+</table>

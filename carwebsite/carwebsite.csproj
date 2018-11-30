@@ -45,16 +45,60 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cquential.System.Data.SqlServerCe.3.0.5206\lib\net35\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Web.Http.Common.4.0.20126.16343\lib\net40\System.Web.Http.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -68,36 +112,12 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http">
-    </Reference>
-    <Reference Include="System.Net.Http.WebRequest">
-    </Reference>
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -109,6 +129,15 @@
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="X.PagedList, Version=7.5.0.0, Culture=neutral, PublicKeyToken=00b6c4f97602e5e8, processorArchitecture=MSIL">
+      <HintPath>..\packages\X.PagedList.7.5.0\lib\net461\X.PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="X.PagedList.Mvc, Version=7.5.0.0, Culture=neutral, PublicKeyToken=c6e0b5b21f916f4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\X.PagedList.Mvc.7.5.0\lib\net461\X.PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="X.PagedList.Mvc.Bootstrap4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\X.PagedList.Mvc.Bootstrap4.7.5.0\lib\net452\X.PagedList.Mvc.Bootstrap4.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -195,14 +224,32 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811221331183_db1.cs" />
+    <Compile Include="Migrations\201811221331183_db1.Designer.cs">
+      <DependentUpon>201811221331183_db1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminViewModels.cs" />
+    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\CarStoreEntities.cs" />
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartTypeViewModel.cs" />
+    <Compile Include="Models\CarTypes.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ShoppingCart.cs" />
+    <Compile Include="Models\ShoppingCartViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -222,7 +269,69 @@
     <Content Include="Content\css\slicknav.min.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\vegas.min.css" />
+    <Content Include="Content\Dashboard\Css\basictable.css" />
+    <Content Include="Content\Dashboard\Css\bootstrap.min.css" />
+    <Content Include="Content\Dashboard\Css\font-awesome.css" />
+    <Content Include="Content\Dashboard\Css\icon-font.min.css" />
+    <Content Include="Content\Dashboard\Css\jqcandlestick.css" />
+    <Content Include="Content\Dashboard\Css\jquery-ui.css" />
+    <Content Include="Content\Dashboard\Css\lightbox.css" />
+    <Content Include="Content\Dashboard\Css\monthly.css" />
+    <Content Include="Content\Dashboard\Css\morris.css" />
+    <Content Include="Content\Dashboard\Css\style.css" />
+    <Content Include="Content\Dashboard\Css\table-style.css" />
+    <Content Include="Content\Dashboard\Images\close.png" />
+    <Content Include="Content\Dashboard\Images\closew.gif" />
+    <Content Include="Content\Dashboard\Images\cross.png" />
+    <Content Include="Content\Dashboard\Images\g1.jpg" />
+    <Content Include="Content\Dashboard\Images\g2.jpg" />
+    <Content Include="Content\Dashboard\Images\g3.jpg" />
+    <Content Include="Content\Dashboard\Images\g4.jpg" />
+    <Content Include="Content\Dashboard\Images\g5.jpg" />
+    <Content Include="Content\Dashboard\Images\g6.jpg" />
+    <Content Include="Content\Dashboard\Images\g7.jpg" />
+    <Content Include="Content\Dashboard\Images\g8.jpg" />
+    <Content Include="Content\Dashboard\Images\g9.jpg" />
+    <Content Include="Content\Dashboard\Images\grid.png" />
+    <Content Include="Content\Dashboard\Images\icon_sprite.png" />
+    <Content Include="Content\Dashboard\Images\in.jpg" />
+    <Content Include="Content\Dashboard\Images\in1.jpg" />
+    <Content Include="Content\Dashboard\Images\in10.jpg" />
+    <Content Include="Content\Dashboard\Images\in11.jpg" />
+    <Content Include="Content\Dashboard\Images\in2.jpg" />
+    <Content Include="Content\Dashboard\Images\in3.jpg" />
+    <Content Include="Content\Dashboard\Images\in4.jpg" />
+    <Content Include="Content\Dashboard\Images\in5.jpg" />
+    <Content Include="Content\Dashboard\Images\in6.jpg" />
+    <Content Include="Content\Dashboard\Images\in7.jpg" />
+    <Content Include="Content\Dashboard\Images\in8.jpg" />
+    <Content Include="Content\Dashboard\Images\in9.jpg" />
+    <Content Include="Content\Dashboard\Images\leftw.gif" />
+    <Content Include="Content\Dashboard\Images\next.png" />
+    <Content Include="Content\Dashboard\Images\phon.png" />
+    <Content Include="Content\Dashboard\Images\prev.png" />
+    <Content Include="Content\Dashboard\Images\rightw.gif" />
+    <Content Include="Content\Dashboard\Images\right_arrow.png" />
+    <Content Include="Content\Dashboard\Images\search.png" />
+    <Content Include="Content\Dashboard\Images\smile.png" />
+    <Content Include="Content\Dashboard\Images\tick.png" />
+    <Content Include="Content\Dashboard\Images\tick1.png" />
+    <Content Include="Content\Dashboard\Scripts\bootstrap.min.js" />
+    <Content Include="Content\Dashboard\Scripts\Chart.js" />
+    <Content Include="Content\Dashboard\Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Content\Dashboard\Scripts\jquery-ui.js" />
+    <Content Include="Content\Dashboard\Scripts\jquery.basictable.min.js" />
+    <Content Include="Content\Dashboard\Scripts\jquery.jqcandlestick.min.js" />
+    <Content Include="Content\Dashboard\Scripts\jquery.nicescroll.js" />
+    <Content Include="Content\Dashboard\Scripts\lightbox-plus-jquery.min.js" />
+    <Content Include="Content\Dashboard\Scripts\monthly.js" />
+    <Content Include="Content\Dashboard\Scripts\morris.js" />
+    <Content Include="Content\Dashboard\Scripts\raphael-min.js" />
+    <Content Include="Content\Dashboard\Scripts\scripts.js" />
     <Content Include="Content\images\404.png" />
+    <Content Include="Content\images\abt1.jpeg" />
+    <Content Include="Content\images\abt2.jpeg" />
+    <Content Include="Content\images\abt3.jpeg" />
     <Content Include="Content\images\arti-thumb-1.jpg" />
     <Content Include="Content\images\arti-thumb-2.jpg" />
     <Content Include="Content\images\arti-thumb-3.jpg" />
@@ -354,10 +463,43 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\_HomeLayout.cshtml" />
     <Content Include="Views\Home\Cars.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\_DashboardAdminLayout.cshtml" />
+    <Content Include="Views\Admin\AddBrand.cshtml" />
+    <Content Include="Views\Admin\BrandList.cshtml" />
+    <Content Include="Views\Admin\DeleteBrand.cshtml" />
+    <Content Include="Views\Admin\EditBrand.cshtml" />
+    <Content Include="Views\Admin\DetailsBrand.cshtml" />
+    <Content Include="Views\Admin\CarTypeList.cshtml" />
+    <Content Include="Views\Admin\AddCarType.cshtml" />
+    <Content Include="Views\Admin\DeleteCarType.cshtml" />
+    <Content Include="Views\Admin\EditCarType.cshtml" />
+    <Content Include="Views\Admin\DetailsCarType.cshtml" />
+    <Content Include="Views\Store\_CarTypeMenu.cshtml" />
+    <Content Include="Views\Admin\AddCar.cshtml" />
+    <Content Include="Views\Admin\Details.cshtml" />
+    <Content Include="Views\Admin\CarList.cshtml" />
+    <Content Include="Views\Admin\EditCar.cshtml" />
+    <Content Include="Views\Admin\DeleteCar.cshtml" />
+    <Content Include="Views\Admin\DetailsCar.cshtml" />
+    <Content Include="Views\Admin\AvailableCar.cshtml" />
+    <Content Include="Views\Admin\DetailsAvailableCAr.cshtml" />
+    <Content Include="Views\Store\Browse.cshtml" />
+    <Content Include="Views\Home\Browse.cshtml" />
+    <Content Include="Views\Store\DetailsCar.cshtml" />
+    <Content Include="Views\Account\DisplayEmail.cshtml" />
+    <Content Include="Views\Users\_DashboardUsersLayout.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Home\AddressAndPayement.cshtml" />
+    <Content Include="Views\Home\OrderDetails.cshtml" />
+    <Content Include="Views\Home\Complete.cshtml" />
+    <Content Include="Views\Admin\RentedCar.cshtml" />
+    <Content Include="Views\Admin\Users.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\fonts\" />
+    <Folder Include="Content\images\Upload\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -371,6 +513,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811221331183_db1.resx">
+      <DependentUpon>201811221331183_db1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

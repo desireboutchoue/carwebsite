@@ -1,0 +1,82 @@
+﻿@model IEnumerable<carwebsite.Models.Car>
+
+@{
+    ViewBag.Title = "AvailableCar";
+    Layout = "~/Views/Admin/_DashboardAdminLayout.cshtml";
+}
+
+<h2>Available Car</h2>
+
+
+<table class="table">
+    <tr>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Class)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fuel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Doors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GearBox)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.Class)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fuel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Doors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GearBox)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+       
+        <td>
+            <!--  @Html.ActionLink("Edit", "Edit", new { id = item.CarId }) |
+         |
+          @Html.ActionLink("Delete", "Delete", new { id=item.CarId }) -->
+
+            <span class="btn btn-info"><i class="fa fa-info" style="color:white;">    @Html.ActionLink("Details", "DetailsAvailableCAr", new { id = item.CarId })  </i> </span>
+        </td>
+    </tr>
+}
+
+</table>

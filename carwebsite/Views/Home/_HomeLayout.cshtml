@@ -3,7 +3,9 @@
 
 <!-- Layout page for Home controller -->
 
-
+@{ 
+    Layout = null;
+}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -104,7 +106,7 @@
                     <!--== Logo End ==-->
                     <!--== Main Menu Start ==-->
                     <div class="col-lg-8 d-none d-xl-block">
-                        <nav class="mainmenu alignright">
+                        <nav style="width:65%;" class="mainmenu alignright">
                             <ul>
                                 <li class="active"> <a href="@Url.Action("Index","Home")">Home</a> </li>
                                 <li><a href="@Url.Action("About","Home")">About</a></li>
@@ -113,23 +115,58 @@
                                     <a href="@Url.Action("Cars","Home")">Cars</a>
 
                                 </li>
+
+                                @{
+
+
+                                    if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                                    {
+                                        <li>@Html.ActionLink("Manage", "Index", "Admin")</li>
+                                    }
+
+
+                                    else if (Request.IsAuthenticated && User.IsInRole("Users"))
+                                    {
+                                        <li>@Html.ActionLink("Panel", "Index", "Users")</li>
+
+                                    }
+
+                                }
+
+
+
+
                                 <!--     <li>
-                                     <a href="index.html">Pages</a>
-                                     <ul>
-                                         <li><a href="package.html">Pricing</a></li>
-                                         <li><a href="driver.html">Driver</a></li>
-                                         <li><a href="faq.html">FAQ</a></li>
-                                         <li><a href="gallery.html">Gallery</a></li>
-                                         <li><a href="help-desk.html">Help Desk</a></li>
-                                         <li><a href="login.html">Log In</a></li>
-                                         <li><a href="register.html">Register</a></li>
-                                         <li><a href="404.html">404</a></li>
-                                     </ul>
-                                 </li>
-                                -->
-                                <li><a style="font-size:30px; margin-top:-15px;" href="@Url.Action("Login","Account")"><i class="fa fa-user"></i></a></li>
+         <a href="index.html">Pages</a>
+         <ul>
+             <li><a href="package.html">Pricing</a></li>
+             <li><a href="driver.html">Driver</a></li>
+             <li><a href="faq.html">FAQ</a></li>
+             <li><a href="gallery.html">Gallery</a></li>
+             <li><a href="help-desk.html">Help Desk</a></li>
+             <li><a href="login.html">Log In</a></li>
+             <li><a href="register.html">Register</a></li>
+             <li><a href="404.html">404</a></li>
+         </ul>
+     </li>
+    -->
+
+                                @if (Request.IsAuthenticated)
+                                {
+                                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <li> <a style="font-size:30px; margin-top:-15px;" href="javascript:document.getElementById('logoutForm').submit()"> <i class="fa fa-sign-out"></i></a></li>
+                                    }
+                                }
+                                else
+                                {
+                                    <li><a style="font-size:30px; margin-top:-15px;" href="@Url.Action("Login","Account")"><i class="fa fa-user"></i></a></li>
+                                }
+
                             </ul>
-                        </nav>
+
+</nav>
                     </div>
                     <!--== Main Menu End ==-->
                 </div>

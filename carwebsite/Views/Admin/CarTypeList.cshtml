@@ -1,0 +1,46 @@
+﻿@model IEnumerable<carwebsite.Models.CarTypes>
+
+@{
+    ViewBag.Title = "CartTypeList";
+    Layout = "~/Views/Admin/_DashboardAdminLayout.cshtml";
+}
+
+<h2>Car Type List</h2>
+
+<p>
+    @Html.ActionLink("Add New Car Type", "AddCarType")
+</p>
+<table class="table">
+    <tr style="background-color:#4CAF50; color:white;border-bottom: 1px solid #ddd;">
+        <th style="color:white";>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th style="color:white";>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th style="color:white";>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr style=" border-bottom: 1px solid #ddd;">
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            <span class="btn btn-success">  <i class="fa fa-edit" style="color:white;"> @Html.ActionLink("Edit", "EditCarType", new { id = item.CarTypesId }, new { style = "color:white;" }) </i> </span>
+            <span class="btn btn-info"> <i class="fa fa-info" style="color:white;">  @Html.ActionLink("Details", "DetailsCarType", new { id = item.CarTypesId }, new { style = "color:white;" })  </i> </span>
+            <span class="btn btn-danger"> <i class="fa fa-trash" style="color:white;"> @Html.ActionLink("Delete", "DeleteCarType", new { id = item.CarTypesId }) </i> </span>
+        </td>
+    </tr>
+}
+
+</table>

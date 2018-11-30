@@ -60,6 +60,14 @@ namespace carwebsite.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
+        private void MigrateShoppingCart(string UserEmail)
+        {
+            // Associate shopping cart items with logged-in user
+            var cart = ShoppingCart.GetCart(this.HttpContext);
+
+            cart.MigrateCart(UserEmail);
+            Session[ShoppingCart.CartSessionKey] = UserEmail;
+        }
 
         //
         // POST: /Account/Login
@@ -101,7 +109,14 @@ namespace carwebsite.Controllers
             {
                 return View("Error");
             }
+            var user = await UserManager.FindByIdAsync(await SignInManager.GetVerifiedUserIdAsync());
+            if (user != null)
+            {
+                ViewBag.Status = "For DEMO purposes the current " + provider + " code is: " + await UserManager.GenerateTwoFactorTokenAsync(user.Id, provider);
+            }
+
             return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe });
+          
         }
 
         //
@@ -155,7 +170,19 @@ namespace carwebsite.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+
+                    // Configure email confirmation 
+
+                    var code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    UserManager.AddToRole(user.Id, "Users");
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    await UserManager.SendEmailAsync(user.Id, "Account Confirmation", "Welcome to the family ，Please click on this link to activate your account. <a href=\"" + callbackUrl + "\">link</a>");
+                    ViewBag.Link = callbackUrl;
+                
+                    return View("DisplayEmail");
+
+
+                  
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
@@ -163,7 +190,7 @@ namespace carwebsite.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");KoreanCalendar mk k
+                   
                 }
                 AddErrors(result);
             }
@@ -208,6 +235,13 @@ namespace carwebsite.Controllers
                     // Don't reveal that the user does not exist or is not confirmed
                     return View("ForgotPasswordConfirmation");
                 }
+
+
+                var code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+                var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please click on this link to reset your password: <a href=\"" + callbackUrl + "\">lien</a>");
+                ViewBag.Link = callbackUrl;
+                return View("ForgotPasswordConfirmation");
 
                 // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                 // Send an email with this link

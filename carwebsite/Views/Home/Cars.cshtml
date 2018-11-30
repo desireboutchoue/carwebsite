@@ -1,4 +1,5 @@
-﻿
+﻿@using carwebsite.Models;
+@model IEnumerable<carwebsite.Models.CarTypes>
 @{
     ViewBag.Title = "Cars";
     Layout = "~/Views/Home/_HomeLayout.cshtml";
@@ -22,134 +23,162 @@
 </section>
 <!--== Page Title Area End ==-->
 <!--== Car List Area Start ==-->
-<section id="car-list-area" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <!-- Car List Content Start -->
-            <div class="col-lg-12">
-                <div class="car-list-content">
-                    <div class="row">
-                        <!-- Single Car Start -->
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single-car-wrap">
-                                <div class="car-list-thumb car-thumb-1"></div>
-                                <div class="car-list-info without-bar">
-                                    <h2><a href="#">Aston Martin One-77</a></h2>
-                                    <h5>39$ Rent /per a day</h5>
-                                    <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean inorci luctus et ultrices posuere cubilia.</p>
-                                    <ul class="car-info-list">
-                                        <li>AC</li>
-                                        <li>Diesel</li>
-                                        <li>Auto</li>
-                                    </ul>
-                                    <p class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star unmark"></i>
-                                    </p>
-                                    <a href="#" class="rent-btn">Book It</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Car End -->
-                        <!-- Single Car Start -->
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single-car-wrap">
-                                <div class="car-list-thumb car-thumb-2"></div>
-                                <div class="car-list-info without-bar">
-                                    <h2><a href="#">Aston Martin One-77</a></h2>
-                                    <h5>39$ Rent /per a day</h5>
-                                    <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean inorci luctus et ultrices posuere cubilia.</p>
-                                    <ul class="car-info-list">
-                                        <li>AC</li>
-                                        <li>Diesel</li>
-                                        <li>Auto</li>
-                                    </ul>
-                                    <p class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star unmark"></i>
-                                    </p>
-                                    <a href="#" class="rent-btn">Book It</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Car End -->
-                        <!-- Single Car Start -->
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single-car-wrap">
-                                <div class="car-list-thumb car-thumb-3"></div>
-                                <div class="car-list-info without-bar">
-                                    <h2><a href="#">Aston Martin One-77</a></h2>
-                                    <h5>39$ Rent /per a day</h5>
-                                    <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean inorci luctus et ultrices posuere cubilia.</p>
-                                    <ul class="car-info-list">
-                                        <li>AC</li>
-                                        <li>Diesel</li>
-                                        <li>Auto</li>
-                                    </ul>
-                                    <p class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star unmark"></i>
-                                    </p>
-                                    <a href="#" class="rent-btn">Book It</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Car End -->
-                        <!-- Single Car Start -->
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single-car-wrap">
-                                <div class="car-list-thumb car-thumb-4"></div>
-                                <div class="car-list-info without-bar">
-                                    <h2><a href="#">Aston Martin One-77</a></h2>
-                                    <h5>39$ Rent /per a day</h5>
-                                    <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean inorci luctus et ultrices posuere cubilia.</p>
-                                    <ul class="car-info-list">
-                                        <li>AC</li>
-                                        <li>Diesel</li>
-                                        <li>Auto</li>
-                                    </ul>
-                                    <p class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star unmark"></i>
-                                    </p>
-                                    <a href="#" class="rent-btn">Book It</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Car End -->
-                    </div>
-                </div>
 
-                <!-- Page Pagination Start -->
-                <div class="page-pagi">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
+@foreach (var type in Model)
+{
+<a href="/Store/@type.Name"  style="text-align:center;">
+    <h2 style="margin-top:30px;">@type.Name</h2>
+</a>
+        <section id="car-list-area" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <!-- Car List Content Start -->
+                    <div class="col-lg-12">
+                        <div class="car-list-content">
+                            <div class="row">
+
+                                @foreach (var car in type.GetTopCar(2))
+                                {
+                                    <!-- Single Car Start -->
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-car-wrap">
+                                            <div class="car-list-thumb"><img src="@car.CarUrl"/></div>
+                                            <div class="car-list-info without-bar">
+                                                <a href="@Url.Action("DetailsCar","Store", new { id = car.CarId})">
+                                                    <h2 style="margin-top:20px;">@car.Name</h2>
+                                                    <h5>@car.Price$ Rent /per a day</h5>
+                                                </a>
+                                                <p>@car.Description</p>
+                                                <ul class="car-info-list">
+                                                    <li>@car.Class</li>
+                                                    <li>@car.GearBox</li>
+                                                    <li>@car.Fuel</li>
+                                                </ul>
+                                                <p class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star unmark"></i>
+                                                </p>
+                                                @{ if (car.Type == "Available")
+                                                    {
+                                                        @Html.ActionLink("Book it", "BookCar",
+               "Home", new { id = car.CarId }, new { @class = "rent-btn" })
+                                                       
+                                                    }
+
+                                                    else
+                                                    {
+                                                        <a href="#" class="rent-btn">Already rented</a>
+                                                    }
+
+                                                }
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                    <!-- Single Car End -->
+                                    <!-- Single Car Start
+        <div class="col-lg-6 col-md-6">
+            <div class="single-car-wrap">
+                <div class="car-list-thumb car-thumb-2"></div>
+                <div class="car-list-info without-bar">
+                    <h2><a href="#">Aston Martin One-77</a></h2>
+                    <h5>39$ Rent /per a day</h5>
+                    <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean inorci luctus et ultrices posuere cubilia.</p>
+                    <ul class="car-info-list">
+                        <li>AC</li>
+                        <li>Diesel</li>
+                        <li>Auto</li>
+                    </ul>
+                    <p class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star unmark"></i>
+                    </p>
+                    <a href="#" class="rent-btn">Book It</a>
                 </div>
-                <!-- Page Pagination End -->
             </div>
-            <!-- Car List Content End -->
         </div>
-    </div>
-</section>
-<!--== Car List Area End ==-->
+        <!-- Single Car End -->
+                                    <!-- Single Car Start
+        <div class="col-lg-6 col-md-6">
+            <div class="single-car-wrap">
+                <div class="car-list-thumb car-thumb-3"></div>
+                <div class="car-list-info without-bar">
+                    <h2><a href="#">Aston Martin One-77</a></h2>
+                    <h5>39$ Rent /per a day</h5>
+                    <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean inorci luctus et ultrices posuere cubilia.</p>
+                    <ul class="car-info-list">
+                        <li>AC</li>
+                        <li>Diesel</li>
+                        <li>Auto</li>
+                    </ul>
+                    <p class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star unmark"></i>
+                    </p>
+                    <a href="#" class="rent-btn">Book It</a>
+                </div>
+            </div>
+        </div>
+        <!-- Single Car End -->
+                                    <!-- Single Car Start
+        <div class="col-lg-6 col-md-6">
+            <div class="single-car-wrap">
+                <div class="car-list-thumb car-thumb-4"></div>
+                <div class="car-list-info without-bar">
+                    <h2><a href="#">Aston Martin One-77</a></h2>
+                    <h5>39$ Rent /per a day</h5>
+                    <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean inorci luctus et ultrices posuere cubilia.</p>
+                    <ul class="car-info-list">
+                        <li>AC</li>
+                        <li>Diesel</li>
+                        <li>Auto</li>
+                    </ul>
+                    <p class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star unmark"></i>
+                    </p>
+                    <a href="#" class="rent-btn">Book It</a>
+                </div>
+            </div>
+        </div>
+        <!-- Single Car End -->
+
+                                </div>
+                        </div>
+
+                        <!-- Page Pagination Start
+                        <div class="page-pagi">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Page Pagination End -->
+                    </div>
+                    <!-- Car List Content End -->
+                </div>
+            </div>
+        </section>
+        <!--== Car List Area End ==-->
+        }

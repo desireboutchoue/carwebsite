@@ -1,0 +1,35 @@
+﻿@model IEnumerable<carwebsite.Models.Brand>
+
+@{
+    ViewBag.Title = "BrandList";
+    Layout = "~/Views/Admin/_DashboardAdminLayout.cshtml";
+}
+
+<h2>Brand List</h2>
+
+<p>
+    @Html.ActionLink("Add New Brand", "AddBrand")
+</p>
+<table class="table">
+    <tr style="background-color:#4CAF50; color:white;border-bottom: 1px solid #ddd;">
+        <th style="color:white;border-bottom: 1px solid #ddd;">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style=" border-bottom: 1px solid #ddd;">
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+
+            <span class="btn btn-success">  <i class="fa fa-edit" style="color:white;"> @Html.ActionLink("Edit", "EditBrand", new { id = item.BrandId }, new { style = "color:white;" }) </i> </span>
+            <span class="btn btn-info"> <i class="fa fa-info" style="color:white;">  @Html.ActionLink("Details", "DetailsBrand", new { id = item.BrandId }, new { style = "color:white;" })  </i> </span>
+            <span class="btn btn-danger"> <i class="fa fa-trash" style="color:white;"> @Html.ActionLink("Delete", "DeleteBrand", new { id = item.BrandId }) </i> </span>
+</td>
+    </tr>
+}
+
+</table>

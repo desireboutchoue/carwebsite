@@ -1,0 +1,47 @@
+﻿@model carwebsite.Models.CarTypes
+
+@{
+    ViewBag.Title = "DetailsCarType";
+    Layout = "~/Views/Admin/_DashboardAdminLayout.cshtml";
+}
+
+<h2>DetailsCarType</h2>
+
+<div>
+    <h4>CarTypes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <span class="btn btn-success">  <i class="fa fa-edit" style="color:white;"> @Html.ActionLink("Edit", "EditCarType", new { id = Model.CarTypesId }, new { style = "color:white;" }) </i> </span>
+   
+</p>
+
+<div>
+    <span class="btn btn-success"> <a style="color:white !important;" href="@Url.Action("CarTypeList","Admin")"> <i class="fa fa-backward"> Back To list</i>  </a> </span>
+</div>
